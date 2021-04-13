@@ -1,0 +1,34 @@
+# 1
+
+# 1.1 - str
+# 1.2 - str
+# 1.3 - int
+# 1.4 - set
+# 1.5 - int
+# 1.6 - list
+# 1.7 - первые 4 значений -str, остальные - int
+# 1.8 - str
+# 1.9 - list
+# 1.10 - str
+
+# 2
+
+def func(deposit, month_count, percentage):
+	result = [(percentage/100) / 12 * deposit + deposit]
+	for i in range(month_count - 1):
+		for k in result:
+			result = (percentage / 100)/ 12 * k + k
+			result.clear()
+			result.append(sum_for_month)
+
+    return sum(result)
+
+print(int(func(1000000, 6, 12)))
+
+
+# 3.1
+ls = ['Element', 'start', 'finish']
+def lst(*args):
+    ls.insert(2, args)
+    return ls
+print(lst(*['hello', 5, 'John', ]))

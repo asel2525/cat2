@@ -32,3 +32,25 @@ def lst(*args):
     ls.insert(2, args)
     return ls
 print(lst(*['hello', 5, 'John', ]))
+
+# 3.2
+def d(*args):
+    dict_keys = list(args)
+    dict_values = [1, 2, 3]
+    dict_zipped = dict(zip(dict_keys, dict_values))
+    return dict_zipped
+        
+    
+print(d('x', 5, 'John')) 
+
+# 3.3
+def func(*args):
+   args = list(args)
+   a = [x for x in args if x % 2 == 0]
+   print(a)
+   lst = []
+   for i in args:
+        i = i**2
+        lst.append(i)
+   print(lst)
+print(func((1,2,3,4,5)))
